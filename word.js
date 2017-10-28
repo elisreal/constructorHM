@@ -17,12 +17,13 @@ exports.checker = function(){
 	if(detected == 0){
 		main.lives++; 
 	}
-	if(main.chosenWord == main.wordGuess) {
-		console.log("YOU WIN!!!!!!!!!!!!!!!");
-		letter.initDisplay();
-		letter.displayWord();
-		main.requestInfo();
-	}
+    console.log(main.wordGuess);
+    if(main.chosenWord == main.wordGuess || letter.wordArr.toString() == letter.guessArr.toString()) {
+        console.log("Congratulations! YOU WIN!!!!!!!!!!!!!!!");
+        console.log(" ");
+        console.log(" ");
+        main.playAgain();
+    }
 	main.requestInfo();
 }; 
 
